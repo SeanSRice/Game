@@ -1,0 +1,109 @@
+/*************************************************************************************************************************************8
+ * Sean Rice
+ * Cassens CSCI 136
+ * 3/9/18
+ * This is the highScoreClass, which will deal with storing high score values and high scorer names, featuring setters and getters
+ * for both, as well as for the score and name of the player. At the bottom, the compare scores method will (when implemented) compare the
+ * scores of the player to the previous high scorers, and if necessary, reassign high score values to the player's values. 
+ */
+
+
+package gameStubCode;
+
+public class highScoreClass {
+
+//3 highest scores and the players who scored them: 1 = highest
+	private int highScore1;
+	private int highScore2;
+	private int highScore3;
+	private int currentPlayerScore;
+	
+	private String highScorer1;
+	private String highScorer2;
+	private String highScorer3;
+	private String currentPlayerName;
+	
+	
+//////CURRENT PLAYER SCORE INFO///////////////////////
+	
+	public void setCurrentPlayerScore(int score)
+	{
+		this.currentPlayerScore = score;
+	}
+	
+	public void setCurrentPlayerName(String name)
+	{
+		this.currentPlayerName = name;
+	}
+	/////END OF CURRENT PLAYER SCORE INFO//////////////
+	
+	
+////////SETTERS AND GETTERS FOR HIGHSCORE VALUES///////////////////////////	
+	public void setHighScore1(int HS1)
+	{
+		this.highScore1 = HS1;	
+	}
+	//////////////////////////////////
+	public void setHighScore2(int HS2)
+	{
+		this.highScore2 = HS2;	
+	}
+	//////////////////////////////////
+	public void setHighScore3(int HS3)
+	{
+		this.highScore3 = HS3;	
+	}
+	//////////////////////////////////
+	public int getHighScore1()
+	{
+		return highScore1;
+	}
+	//////////////////////////////////
+	public int getHighScore2()
+	{
+		return highScore2;
+	}
+	//////////////////////////////////
+	public int getHighScore3()
+	{
+		return highScore3;
+	}
+	////END OF HIGHSCORE SETTERS AND GETTERS/////////////////
+	
+	////SETTERS AND GETTERS FOR HIGH SCORERS/////////////////
+	public void setHighScorer1(String name)
+	{
+		this.highScorer1 = name;
+	}
+	//////////////////////////////////////////////
+	public void setHighScorer2(String name)
+	{
+		this.highScorer2 = name;
+	}
+	//////////////////////////////////////////////
+	public void setHighScorer3(String name)
+	{
+		this.highScorer3 = name;
+	}
+	//////////////////////////////////////////////
+	public String getHighScorer1()
+	{
+		return highScorer1;
+	}
+	//////////////////////////////////////////////
+	public String getHighScorer2()
+	{
+		return highScorer2;
+	}
+	///////////////////////////////////////////////
+	public String getHighScorer3()
+	{
+		return highScorer3;
+	}
+	///////////////////////////////////////////////
+	public void compareScores()
+	{
+		//here is where we will compare the player's scores and potentially reassign the top scorer and top scores
+	}
+	
+}
