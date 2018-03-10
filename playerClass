@@ -1,0 +1,78 @@
+/***********************************************************************************************************************
+ * Sean Rice
+ * Cassens CSCI 136
+ * 3/9/18
+ * This class handles the player information, such as their name, level, the number of items they have collected, their image and
+ * score. It also deals with the player movement, which will be done through the movement class, and the death of the player, which
+ * will terminate the instance as well as sent the player's score to the highScoreClass, to determine if they have a high score. 
+ * *************************************************************************************************************************
+ */
+
+package gameStubCode;
+
+public class playerClass {
+
+	private String playerName;
+	private int numItems = 0;
+	private String playerImage; //source/value TBD
+	//MOVEMENT CLASS INSTANCE???
+	private int currentScore = 0;
+	private int currentLevel = 1;
+	
+	//CONSTRUCTOR///////////////////
+	public playerClass(String name)
+	{
+		this.playerName = name;
+	}
+	///////////////////////////////
+	
+	//METHOD TIME/////////////////////
+	public void incrementNumItems()
+	{
+		numItems+=1;
+	}
+	//////////////////////////////////
+	public String getName()
+	{
+		return playerName;
+	}
+	//////////////////////////////////
+	public String getPlayerImage()
+	{
+		return playerImage;
+	}
+	//////////////////////////////////
+	public void incrementCurrentScore()
+	{
+		currentScore+=20; //We will determine at a later date if all items will
+							//be worth the same number of points or not
+	}
+	//////////////////////////////////
+	public int getCurrentScore()
+	{
+		return currentScore;
+	}
+	///////////////////////////////////
+	public void incrementCurrentLevel()
+	{
+		currentLevel+=1;
+	}
+	///////////////////////////////////
+	public int getCurrentLevel()
+	{
+		return currentLevel;
+	}
+	//////////////////////////////////
+	public void move()
+	{
+		//here we will handle the player movement, calling the 
+		//movement class... I think...
+	}
+	//////////////////////////////////
+	public void die()
+	{
+		//This will kill our player and send their final score to the 
+		//highScore Class so we will know if they worthy of rememberance..
+		//At least I'm pretty sure this is where I should handle that....
+	}
+}
