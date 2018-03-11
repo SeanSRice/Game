@@ -1,0 +1,87 @@
+/**********************************************************************************************************
+ * Sean Rice
+ * Cassens CSCI 136
+ * 3/10/18
+ * This class will, eventually, when I know more than I do now, handle the instantiation of the parts of the game, such as the player
+ * itself, the enemies, and the items, as well as how many of them there are total versus how many there are currently of each (subject
+ * to change for the enemy) It's a little beyond me right now, but this is a start. 
+ */
+
+package gameStubCode; 
+
+public class Game { 
+ 
+	private int totalNumberOfEnemies; 
+	private int totalNumberOfItems; 
+	private int currentNumberOfEnemies; 
+	private int currentNumberOfItems; 
+	private int currentPlayerScore; 
+
+	//I think, not 100%, but I think that for these methods that instantiate objects, 
+	//we have to pass in the stuff that will go in the object constructor... 
+	public void createItem() 
+	{ 
+		//This method will instantiate an item in the game 
+	} 
+	///////////////////////////////////// 
+	public void createPlayer(String name) 
+	{ 
+		//This method will instantiate the player in the game 
+	} 
+	/////////////////////////////////// 
+	public void createEnemy() 
+	{ 
+		//This method will instantiate a new enemy from the enemy class onscreen 
+	} 
+	/////////////////////////////////// 
+	public void setTotalNumberOfItems(int itemNum) 
+	{ 
+		//this method will set the total number of items to be instantiated 
+		//based on the player's level. For now, it will just hold whatever value 
+		//we send in.  
+		this.totalNumberOfItems = itemNum; 
+	} 
+	///////////////////////////////////
+	public int getTotalNumberOfItems()
+	{
+		return totalNumberOfItems; 
+	}
+	/////////////////////////////////// 
+	public void setTotalNumberOfEnemies(int totEnemyNum) 
+	{ 
+		//THis method will determine the total number of enemies to appear, 
+		//based on the player's level. Or, we may decide to only have one enemy 
+		//regardless of level. That is to be determined.  
+		this.totalNumberOfEnemies  = totEnemyNum; 
+	} 
+	//////////////////////////////////
+	public int getTotalNumberOfEnemies()
+	{
+		return totalNumberOfEnemies;
+	}
+	//////////////////////////////////
+	public void setCurrentNumberOfEnemies(int enemyNum) 
+	{ 
+		//This class will increment or change the current number of enemies 
+		//on the field, versus the total number we're going to put (if we 
+		//even decide to put more than one) For now just holds value 
+		this.currentNumberOfEnemies = enemyNum; 
+	} 
+	//////////////////////////////////
+	public int getCurrentNumberOfEnemies()
+	{
+		return currentNumberOfEnemies;
+	}
+	////////////////////////////////// 
+	public void setCurrentNumberOfItems(int itemNum) 
+	{ 
+		//This will increment or alter the current number of items on the field 
+		//versus the total. For now, it will just store whatever you throw in.  
+		this.currentNumberOfItems = itemNum; 		 
+	} 
+	/////////////////////////////////
+	public int getCurrentNumberOfItems()
+	{
+		return currentNumberOfItems;
+	}
+} 
