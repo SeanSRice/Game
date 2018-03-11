@@ -1,0 +1,48 @@
+package gameStubCode;
+
+public class GamePlayer {
+
+	String name;
+	String image;
+	int numItems;
+	
+	public GamePlayer(String name, String image, int numItems) 
+	{
+		this.name = name;
+		this.image = image;
+		this.numItems = numItems;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;	
+	}
+	public String getImage()
+	{
+		return image;
+	}
+	public void setImage(String image)
+
+	{
+		this.image = image;	
+	}
+	public void incrementItems()
+	{
+		this.numItems+=1;
+	}
+	public int getNumItems()
+	{
+		return numItems;
+	}
+	public String toString()
+	{
+		return "\nName: "+name+"\nNumber of items:"+numItems;
+	}
+	public void move()
+	{
+		//Here the movement class will be called, I think, and the player will move
+	}
+}
