@@ -1,0 +1,62 @@
+package gameStubCode;
+
+public class driver {
+
+	public static void main(String[] args) {
+		
+	//HERE WE ARE PROVING THAT THE SETTERS AND GETTERS FOR THE HIGH SCORE CLASS FUNCTION PROPERLY
+		highScoreClass hs = new highScoreClass();
+		hs.setHighScore1(1);
+		hs.setHighScore2(2);
+		hs.setHighScore3(3);
+		System.out.println("High Score 1 is: " + hs.getHighScore1());
+		System.out.println("High Score 2 is: " + hs.getHighScore2());
+		System.out.println("High Score 3 is: " + hs.getHighScore3());
+	
+		hs.setHighScorer1("Sean");
+		hs.setHighScorer2("Charlie");
+		hs.setHighScorer3("Ash");
+		System.out.println("High Scorer 1 is: " + hs.getHighScorer1());
+		System.out.println("High Scorer 2 is: "+ hs.getHighScorer2());
+		System.out.println("High Scorer 3 is: " + hs.getHighScorer3());
+		
+		hs.setCurrentPlayerName("Bobby Hill");
+		hs.setCurrentPlayerScore(666);
+		//!!!THESE TWO DON'T HAVE GETTERS, BECAUSE YOU WILL ONLY NEED TO GET THEM
+		//IF THE PLAYER BECOMES A NEW HIGH SCORER, IN WHICH CASE THESE VALUES WILL BE ACCESSED BY THOSE GETTERS
+		
+		hs.compareScores(); //This method currently does nothing, but when it grows up, it will compare the current player's scores
+							//to the current high scores, and crown them a high scorer if necessary. 
+		
+		//End of high score class//////////////////////////////////////////////////////////////////
+		
+		
+		//GAME PLAYER CLASS////////////////////////////////////////////////////////////////////////
+		GamePlayer player1 = new GamePlayer("Sean", "ImageLocation Here", 0 );
+		
+		System.out.println("String that cotains player image location: " + player1.getImage());
+		System.out.println("Player Name: " + player1.getName());
+		System.out.println("Number of player items to start: " + player1.getNumItems());
+		player1.incrementItems();
+		System.out.println("Number of player items after 1st item collection: " + player1.getNumItems());
+		
+		////////////////////////END OF PLAYER 1 METHODS////////////////////////////////////////////////////
+		
+		////////////////////////GAME CLASS METHODS/////////////////////////////////////////////////////////
+		
+		Game game = new Game();
+		
+		game.createEnemy();//One day, this will instantiate a new enemy
+		game.createItem();//same here, with items
+		game.createPlayer("Steve"); //This will create a player, and name him. 
+		
+		game.setCurrentNumberOfEnemies(6);
+		game.setTotalNumberOfEnemies(8);//These babies will deal with current vs total monsters
+		System.out.println("The total number of monsters will be " + game.getTotalNumberOfEnemies() + ", currently there are " + game.getCurrentNumberOfEnemies());
+		
+		game.setCurrentNumberOfItems(5);
+		game.setTotalNumberOfItems(7);//These will deal with how many items there are vs how many there should be
+		System.out.println("There are " + game.getCurrentNumberOfItems() + " items now, there will be " + game.getTotalNumberOfItems() + " Total.");
+	}
+
+}
