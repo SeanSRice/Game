@@ -49,7 +49,7 @@ public class Enemy {
 	{
 		this.enemyYLocation = enemyYLocation;
 	}
-	public int getItemXLocation()
+	public int getEnemyYLocation()
 	{
 		return enemyYLocation;
 	} 

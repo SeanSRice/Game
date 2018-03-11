@@ -16,7 +16,7 @@ public class MovementandCollision{
 		this.collisionType = collisionType;
 		this.collision = collision;
 	}
-	//current Direction
+	//current Direction and speed
 	public void setCurrentDirection()
 	{
 		this.currentDirection = currentDirection;
@@ -24,6 +24,14 @@ public class MovementandCollision{
 	public int getCurrentDirection()
 	{
 		return currentDirection;
+	}
+	public void setMovementSpeed()
+	{
+		this.movementSpeed = movementSpeed;
+	}
+	public int getMovementSpeed()
+	{
+		return movementSpeed;
 	}
 	//current X and Y Lcoations
 	public void setXLocation()
@@ -51,6 +59,14 @@ public class MovementandCollision{
 	public int getCollisionType()
 	{
 		return collisionType;
+	}
+	public void setCollision()
+	{
+		this.collision = collision;
+	}
+	public boolean getCollision()
+	{
+		return collision;
 	}
 	
 }
